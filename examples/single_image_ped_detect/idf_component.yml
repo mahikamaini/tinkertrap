@@ -1,0 +1,3 @@
+dependencies:
+  pedestrian_detect:
+    git: https://github.com/espressif/pedestrian_detect.git

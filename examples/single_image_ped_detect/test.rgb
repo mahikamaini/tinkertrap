@@ -1,0 +1,10 @@
+import cv2
+import numpy as np
+
+img = cv2.imread("input.jpg")
+resized = cv2.resize(img, (240, 240))
+rgb565 = ((resized[:, :, 2] >> 3) << 11) | ((resized[:, :, 1] >> 2) << 5) | (resized[:, :, 0] >> 3)
+rgb565_bytes = rgb565.astype(np.uint16).byteswap().tobytes()
+
+with open("test.rgb", "wb") as f:
+    f.write(rgb565_bytes)

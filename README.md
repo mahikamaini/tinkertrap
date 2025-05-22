@@ -22,3 +22,11 @@ Plug in and set up the ESP32-S3 device.
 The device requires a USB-A to micro-USB cable, not a USB-A to USB-C cable. 
 ### What I Accomplished
 I was able to install the necessary UART drivers on my laptop and obtain a USB-A to micro-USB cable. From there, I connected the ESP32 to my laptop and successfully flashed some of the example scripts to it. With Ben, we also discussed how to best adapt the existing pedestrian_detect code to apply to single images rather than a continuous video feed using ChatGPT as a guide. 
+
+## Wednesday, May 21, 2025
+### Task
+Do initial file structure setup for the project as given by ChatGPT.
+### Notes
+N/A
+### What I Accomplished
+I was able to set up the project with the relevant file structure and code given by ChatGPT. While trying to build the project, I ran into various bugs, mostly involving installing necessary CMake drivers and ESP version control. I am currently working with ChatGPT to resolve these errors. 
