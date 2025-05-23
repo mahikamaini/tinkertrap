@@ -29,4 +29,12 @@ Do initial file structure setup for the project as given by ChatGPT.
 ### Notes
 N/A
 ### What I Accomplished
-I was able to set up the project with the relevant file structure and code given by ChatGPT. While trying to build the project, I ran into various bugs, mostly involving installing necessary CMake drivers and ESP version control. I am currently working with ChatGPT to resolve these errors. 
+I was able to set up the project with the relevant file structure and code given by ChatGPT. While trying to build the project, I ran into various bugs, mostly involving installing necessary CMake drivers and ESP version control. I am currently working with ChatGPT to resolve these errors.
+
+## Thursday, May 22, 2025
+### Task
+Debug CMake errors that were appearing when trying to build the project; continue to debug in order for successful compilation to occur. 
+### Notes
+The device target confirmation in the Terminal does not show up unless initial build is successful. 
+### What I Accomplished
+I realized the CMake error was due to my version (5.1.1) not matching the overall version (5.4.1), so resolving this version conflict resolved the initial issue. However, there was a similar issue with the ESP-IDF version, though this was resolved in a similar manner and making sure all dependencies and filepaths were present and correct. I also fixed an issue with the single_image_detect.cpp referencing the wrong name of the single_image_detect.hpp file. However, a fatal error persisted in which pedestrian_detect.hpp was being referenced as a header in single_image_detect.hpp but was never created during build. 
