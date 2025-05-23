@@ -1,4 +1,4 @@
-#include "single_image_detect.hpp"
+#include "detect_single_image.hpp"
 #include "pedestrian_detect.hpp"
 #include "esp_log.h"
 #include "esp_err.h"
