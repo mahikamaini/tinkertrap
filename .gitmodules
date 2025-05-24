@@ -1,0 +1,3 @@
+[submodule "examples/single_image_ped_detect/components/esp-dl"]
+	path = examples/single_image_ped_detect/components/esp-dl
+	url = https://github.com/espressif/esp-dl.git
