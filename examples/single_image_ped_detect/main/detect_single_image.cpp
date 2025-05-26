@@ -1,5 +1,5 @@
 #include "detect_single_image.hpp"
-#include "dl/models/pedestrian_detect/pedestrian_detect.hpp"
+#include "pedestrian_detect.hpp"
 #include "esp_log.h"
 #include "esp_err.h"
 #include "esp_vfs_fat.h"
