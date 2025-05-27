@@ -54,3 +54,11 @@ Fix file path and CMakeLists files to ensure the correct files were being used i
 N/A
 ### What I Accomplished
 I modified the CMakeLists file in the main folder to reference directories that included files mentioned in the detect_single_image.cpp headers. I also cleaned up the file structure a little bit - removing the main folder inside the pedestrian_detect folder - and updated the file paths referenced in all the CMakeLists files. I also ensured that each level of CMakeLists was referencing the correct SRC/private file directories. Currently, I'm repeating this process to make sure any files within the esp-idf-v5.1.1 folder are also referenced properly. 
+
+## Tuesday, May 27, 2025
+### Task
+Make sure files in the esp-idf-v5.1.1 were referenced properly.
+### Notes
+N/A
+### What I Accomplished
+I found including the file path to esp_vfs_fat.h in main/CMakeLists was incorrect and was a version mismatch as the ESP-IDF version I was using was 5.4.1 and the path was meant for version 5.1.1. To fix this, I put fatfs under the REQUIRES header instead. This resolved the final filepath issue, leaving only compilation issues afterwards. The bulk of compilation issues seem to be coming from single_image_ped_detect.hpp and single_image_ped_detect.cpp, which were generated and thus likely don't entirely work with the existing file structure. My next steps will be to copy in the existing pedestrian_detect code and modify along the way as necessary for our purpose. 

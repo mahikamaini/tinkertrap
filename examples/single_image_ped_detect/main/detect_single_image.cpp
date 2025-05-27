@@ -1,5 +1,5 @@
 #include "detect_single_image.hpp"
-#include "pedestrian_detect.hpp"
+// #include "pedestrian_detect.hpp"
 #include "esp_log.h"
 #include "esp_err.h"
 #include "esp_vfs_fat.h"
@@ -7,8 +7,9 @@
 #include "driver/sdmmc_defs.h"
 #include "sdmmc_cmd.h"
 #include "esp_timer.h"
-#include "dl_image.hpp"
+#include "vision/image/dl_image.hpp"
 #include "esp_mac.h"
+// #include "bsp_board.h" include only ped detect includes and cmakelists
 
 #define TAG "SingleImageDetect"
 

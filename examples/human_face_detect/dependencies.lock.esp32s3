@@ -123,12 +123,12 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 5.4.0
+    version: 5.4.1
 direct_dependencies:
 - espressif/esp-dl
 - espressif/esp32_s3_eye_noglib
 - espressif/human_face_detect
 - idf
-manifest_hash: ff42149b30f1ba67b26ebd94317f72a369fe0ddfd576aa293e4d197c2ce5b648
+manifest_hash: cb2b3d238fa7c8c2d8413162d6364b52746b7abca1903ba163359462be182158
 target: esp32s3
 version: 2.0.0
