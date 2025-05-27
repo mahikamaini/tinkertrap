@@ -8,6 +8,7 @@
 #include "sdmmc_cmd.h"
 #include "esp_timer.h"
 #include "dl_image.hpp"
+#include "esp_mac.h"
 
 #define TAG "SingleImageDetect"
 

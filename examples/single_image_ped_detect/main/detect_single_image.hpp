@@ -10,5 +10,4 @@ extern "C" void app_main(void)
 void run_single_image_detection(const char *image_path);
 
 #ifdef __cplusplus
-}
 #endif
