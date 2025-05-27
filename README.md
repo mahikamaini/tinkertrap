@@ -39,10 +39,18 @@ The device target confirmation in the Terminal does not show up unless initial b
 ### What I Accomplished
 I realized the CMake error was due to my version (5.1.1) not matching the overall version (5.4.1), so resolving this version conflict resolved the initial issue. However, there was a similar issue with the ESP-IDF version, though this was resolved in a similar manner and making sure all dependencies and filepaths were present and correct. I also fixed an issue with the single_image_detect.cpp referencing the wrong name of the single_image_detect.hpp file. However, a fatal error persisted in which pedestrian_detect.hpp was being referenced as a header in single_image_detect.hpp but was never created during build. 
 
-## Friday May 23, 2025
+## Friday, May 23, 2025
 ### Task
 Find the cause as to why relevant files such as pedestrian_detect.hpp were not being pulled from the GitHub repo during build. 
 ### Notes
 N/A
 ### What I Accomplished
 I attempted lengthy debugging for this issue, mainly modifying CMakeLists.txt and idf.yml files. I managed to add an esp-dl folder into the project, which contained pedestrian_detect.hpp and other files listed as headers in the main project files. However, I realized the file paths listed were incorrect and that I needed to update those to reflect the current project file structure, as certain files were not being referenced and causing errors. 
+
+## Monday, May 26, 2025
+### Task
+Fix file path and CMakeLists files to ensure the correct files were being used in file headers. 
+### Notes
+N/A
+### What I Accomplished
+I modified the CMakeLists file in the main folder to reference directories that included files mentioned in the detect_single_image.cpp headers. I also cleaned up the file structure a little bit - removing the main folder inside the pedestrian_detect folder - and updated the file paths referenced in all the CMakeLists files. I also ensured that each level of CMakeLists was referencing the correct SRC/private file directories. Currently, I'm repeating this process to make sure any files within the esp-idf-v5.1.1 folder are also referenced properly. 
