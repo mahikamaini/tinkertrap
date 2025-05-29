@@ -62,3 +62,11 @@ Make sure files in the esp-idf-v5.1.1 were referenced properly.
 N/A
 ### What I Accomplished
 I found including the file path to esp_vfs_fat.h in main/CMakeLists was incorrect and was a version mismatch as the ESP-IDF version I was using was 5.4.1 and the path was meant for version 5.1.1. To fix this, I put fatfs under the REQUIRES header instead. This resolved the final filepath issue, leaving only compilation issues afterwards. The bulk of compilation issues seem to be coming from single_image_ped_detect.hpp and single_image_ped_detect.cpp, which were generated and thus likely don't entirely work with the existing file structure. My next steps will be to copy in the existing pedestrian_detect code and modify along the way as necessary for our purpose. 
+
+## Wednesday, May 28, 2025
+### Task
+Resolve all compilation errors and generate code to detect pedestrians from an SD card. 
+### Notes
+Maintaining a simple file structure minimizes most version and compilation errors. 
+### What I Accomplished
+I cleaned up the project file structure in order for it to mirror the original pedestrian_detect file structure. This led to much of the version and file errors being resolved as the project was able to properly pull relevant files from the Espressif GitHub repository and generate proper build files. I utilized Gemini to generate sample code for detecting pedestrians using the SD card, which I hope to test soon with example images. 
