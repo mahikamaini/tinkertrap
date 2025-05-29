@@ -95,6 +95,17 @@ dependencies:
       registry_url: https://components.espressif.com
       type: service
     version: 1.3.0
+  espressif/pedestrian_detect:
+    component_hash: bb65e7192026bb9369eac7445a80e156ba5a8cb9264a5f254db0308248bf103c
+    dependencies:
+    - name: espressif/esp-dl
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^3.1.1
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.2.2
   espressif/qma6100p:
     component_hash: dee71383df1d07ad56557eccf8b6f6de3689bee5afc14e353f9149299daf5ca5
     dependencies:
@@ -116,7 +127,8 @@ dependencies:
 direct_dependencies:
 - espressif/esp-dl
 - espressif/esp32_s3_eye_noglib
+- espressif/pedestrian_detect
 - idf
-manifest_hash: 278eada5b2ed972bd3042c08c2dae53d6eefddcf79484503d2ce15a7f44528f6
+manifest_hash: 888d0b1089b844ff07c78857102b6b22140af8ba03a96f45c84c90a675c07796
 target: esp32s3
 version: 2.0.0
