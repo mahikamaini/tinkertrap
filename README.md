@@ -70,3 +70,11 @@ Resolve all compilation errors and generate code to detect pedestrians from an S
 Maintaining a simple file structure minimizes most version and compilation errors. 
 ### What I Accomplished
 I cleaned up the project file structure in order for it to mirror the original pedestrian_detect file structure. This led to much of the version and file errors being resolved as the project was able to properly pull relevant files from the Espressif GitHub repository and generate proper build files. I utilized Gemini to generate sample code for detecting pedestrians using the SD card, which I hope to test soon with example images. 
+
+## Friday, May 30, 2025
+### Task
+Debug code for detecting pedestrians from an SD card.
+### Notes
+N/A
+### What I Accomplished
+I downloaded the .zip file with the test images and loaded them onto the SD card. I then imported the contents of the SD card into my project and put the file path for one of the images in the generated code. However, I ran into compilation issues with the code, particularly regarding the JPEG decoder to convert the JPG image files to a format useful for the code. I tried debugging by ensuring the right file was referenced as a header - however, the compiler was not able to find this file in the system. I will do research and hopefully find videos detailing this functionality as there is a possibility this may not be compatible with the ESP32-S3 (the device we have). 
