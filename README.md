@@ -78,3 +78,11 @@ Debug code for detecting pedestrians from an SD card.
 N/A
 ### What I Accomplished
 I downloaded the .zip file with the test images and loaded them onto the SD card. I then imported the contents of the SD card into my project and put the file path for one of the images in the generated code. However, I ran into compilation issues with the code, particularly regarding the JPEG decoder to convert the JPG image files to a format useful for the code. I tried debugging by ensuring the right file was referenced as a header - however, the compiler was not able to find this file in the system. I will do research and hopefully find videos detailing this functionality as there is a possibility this may not be compatible with the ESP32-S3 (the device we have). 
+
+## Tuesday, June 3, 2025
+### Task
+Get the JPEG decoder example from Espressif to work with the device.
+### Notes
+It seems the JPEG decoder example is likely not supported anymore, as various build dependencies weren't being found and the issues were replicated with other devices. 
+### What I Accomplished
+I attempted to debug the runtime errors happening when the JPEG decoder example was running. I was told by my mentor to try setting a device target and installing Python extension requirements; however, this did not resolve the issue. I also tried changing the ESP-IDF extension configuration to use Espressif instead of GitHub, but this did not help, either. After being notified by my mentor that the script wasn't running on his end, either, we came to the conclusion that this example is likely not supported anymore with the current version of ESP-IDF. My mentor also found another example closer to our end goal - a version of pedestrian_detect that embeds an image in firmware, runs JPEG decoding, and prints out the locations of pedestrians in the image to the terminal. From here on out, I will work off of this script. 
